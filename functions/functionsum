@@ -1,0 +1,9 @@
+def accum(lst):
+    sum = 0
+    for num in lst:
+        sum = sum + num
+    return sum
+
+
+numbers = [1, 4, 2, 6]
+print(accum(numbers))
