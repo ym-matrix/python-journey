@@ -1,11 +1,10 @@
 import functools
 import time 
 
-start_time=time.time()
-
 def performance(func):
     @functools.wraps(func)
     def wrapper(*args,**kwargs):
+        start_time=time.time()
         result=func(*args,**kwargs)
         end_time=time.time()
         elapsedtime=end_time-start_time
@@ -16,4 +15,4 @@ def performance(func):
 def sub(a,b):
     return a-b
 
-print(sub(100,53))
+print(sub(1010,1))
